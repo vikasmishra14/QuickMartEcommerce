@@ -1,0 +1,56 @@
+.login-container , .contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white; 
+}
+.login-form , .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    padding: 50px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form-group span {
+  font-size: 1rem;
+}
+.form-group input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.form-group input:focus , .form-group textarea:focus {
+  outline: none;
+}
+.login-form button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+}
+.login-form button:hover {
+  background-color: rgb(97, 92, 92);
+  color: white;
+}
+.login-form button:focus {
+  outline: none;
+}
+.form-group a {
+  text-decoration: none;
+  color: rgb(49, 49, 235);
+}
+.form-group a:hover {
+  color: rgb(1, 1, 245);
+  text-decoration: underline;
+}
