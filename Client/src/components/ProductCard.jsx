@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import { useSelector } from 'react-redux';
 const ProductCard = ({ product }) => {
   const [loading, setLoading] = useState(false);
   const [addedToCart, setAddedToCart] = useState(false); // Track cart status
 
+  const {user}=useSelector((state)=>state.user);
   const handleAddToCart = async () => {
+    if(!user){
+      alert("login to add into cart")
+      return;
+    }
     setLoading(true);
     try { 
        // Check if token is present in the cookies

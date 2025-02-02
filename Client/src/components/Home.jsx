@@ -1,6 +1,4 @@
-import CategorySelector from './CategorySelector';
-import Footer from './Footer';
-import NavBar from './Header';
+import CategorySelector from './CategorySelector'; 
 import Product from './Product';
 import { useState, useEffect } from 'react';
 import axios from 'axios';

@@ -25,7 +25,8 @@ const NavBar = () => {
       setFilteredProducts(filtered);
     } else {
       setFilteredProducts([]);
-    }
+    } 
+
   }, 2000); // 2 seconds debounce
 
   // Update search state and trigger debounce search
@@ -65,13 +66,7 @@ const NavBar = () => {
     );
   }
 
-  if (error) {
-    return (
-      <nav>
-        <div>Error fetching user data. Please try again later.</div>
-      </nav>
-    );
-  }
+ 
 
   return (
     <nav>
@@ -108,11 +103,10 @@ const NavBar = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About Us</Link></li>
         <li><Link to="/contact">Contact</Link></li>
-
+        <li><Link to="/cart">Cart</Link></li>
         {/* Conditional rendering based on login status */}
         {  
-        user ? (
-          console.log(user),
+        user ? ( 
           <li>
               <li><Link to="/profile">{user.name}</Link></li>
           </li>
